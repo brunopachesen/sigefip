@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+    Route::group(['prefix' => 'administrativo'], function() {
+        
+        Route::get('avisos', function () {
+            return view('administrativo/avisos/index');
+        });
+    });
